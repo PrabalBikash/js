@@ -1,0 +1,26 @@
+<div>
+	<div class="${baseClass}Row">
+		<p>
+			<label for="${id}_inputUsername">${_labelUsername}</label>
+			<input id="${id}_inputUsername" dojoAttachPoint="_inputUsername" />
+		</p>
+	</div>
+	<div class="${baseClass}Row">
+		<p>
+			<label for="${id}_inputPassword">${_labelPassword}</label>
+			<input id="${id}_inputPassword" type="password" dojoAttachPoint="_inputPassword" />
+		</p>
+	</div>
+	<div class="${baseClass}RowV">
+		<p>
+			<label for="${id}_inputVerifyCode">${_labelVerifyCode}</label>
+			<input id="${id}_inputVerifyCode" dojoAttachPoint="_inputVerifyCode" />
+		</p>
+		<img src="${verifyUrl}" alt="${_imgAltVerifyCode}" style="cursor:pointer" title="${_imgTipVerifyCode}" dojoAttachEvent="onclick:_refreshVerifyCode" dojoAttachPoint="_imgVerifyCode" />
+	</div>
+	<div class="${baseClass}Button">
+		<input type="button" dojoAttachEvent="onclick:_onSubmit" value="${_buttonValLogin}" dojoAttachPoint="_buttonLogin" />
+		<input type="button" dojoAttachEvent="onclick:_onReset" value="${_buttonValReset}" />
+	</div>
+	<div class="${baseClass}Message" dojoAttachPoint="_message"></div>
+</div>

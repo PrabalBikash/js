@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../../../resjs/commons/components/dojo/dojo/resources/dojo.css" />
+		<link rel="stylesheet" type="text/css" href="../../../../resjs/commons/components/dojo/dijit/themes/fore/fore.css" />
+
+
+		<script type="text/javascript">
+			var djConfig = {
+				locale: location.search.match(/locale=([\w\-]+)/) ? RegExp.$1 : "zh",
+				async: true,
+				bindEncoding: "UTF-8",
+				packages: [{
+					name: "capec",
+					location: "../../../../../dojox/dojox"
+				}]
+			};
+		</script>
+
+		<script type="text/javascript" src="../../../../resjs/commons/components/dojo/dojo/dojo.js" data-dojo-config="isDebug:false,parseOnLoad:true"></script>
+
+		<SCRIPT LANGUAGE="JavaScript">
+		<!--
+			require(["dojo/ready",
+				"capec/login/LoginForm"],function($ready,$LoginForm){
+
+				$ready(function(){
+					new $LoginForm({
+						verifyUrl: "https://ha.ac.10086.cn/checkImage?1362911194603&authTimes=0",
+						loginUrl: "login.json",
+						nextUrl: "main.html"
+					}, "_loginForm");
+				});
+			});
+		//-->
+		</SCRIPT>
+
+	</head>
+	<body class="soria">
+		<div id="_loginForm"></div>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<div>
+	<div id="head">
+		<div id="top-header">
+			<div class="p_logo">
+				<h1>
+					<a href="javascript:void(0);" dojoAttachEvent="onclick:_showDefPage">产品公共基础管理平台</a>
+				</h1>
+				<span class="p_logo_lbg"></span>
+			</div>
+			<div class="p_ofenn"></div>
+			<div id="menu">
+				<div class="nav">
+					<ul dojoType="capec.frame.Menus"></ul>
+					<ul>
+						<li is="menuindex" class="nav_vline"><a iblk="其它操作" href="javascript:void(0);" class="join_huawei"><span>其它操作</span> </a>
+							<div class="menuitempanel">
+								<div class="menucontentdiv menuright">
+									<div class="menufillet_e"></div>
+									<div class="trad clearfix">
+										<ul class="taxonomy" style="width: 100px;">
+											<li><a href="javascript:void(0);" class="topfrx" target="_blank"><span style="color: #333；font-size:14px;font-weight:bold;">密码修改</span> </a></li>
+											<li><a href="javascript:void(0);" class="topfrx" target="_blank">语言设置</a></li>
+											<li><a href="javascript:void(0);" class="topfrx" target="_blank">主题设置</a></li>
+											<li><a href="javascript:void(0);" class="topfrx" target="_blank">常用功能设置</a></li>
+										</ul>
+										<div class="verticalLine"></div>
+										<ul class="m_box" style="width: 300px;">
+											<li class="title"><span class="m_box_span">旧密码：</span><input name="" type="text" /></li>
+											<li class="title"><span class="m_box_span">新密码：</span><input name="" type="text" /></li>
+											<li class="title"><span class="m_box_span">确认密码：</span><input name="" type="text" /></li>
+											<li class="title" style="text-align: center; margin-top: 10px;"><input name="" type="button" value="确认" class="btn1" /></li>
+										</ul>
+									</div>
+									<div class="shadow_b_layout">
+										<div></div>
+									</div>
+								</div>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="p_help_cancel">
+				<a href="../说明文档/index.html" target="_blank" class="m_help"></a> <a href="login.html" class="m_quit"></a>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="p_often_menu">
+			<ul class="p_often_sec" dojoType="capec.frame.Toolbar" url="${tbarSource}"></ul>
+		</div>
+		<div class="bread_nav" style="display:none">
+			<div class="current_address">
+				当前位置：<a href="javascript:void(0);">首页</a> &gt;<a href="javascript:void(0);">基础应用</a>
+			</div>
+			<div class="past_nav">
+				<!--[if lte IE 6]><a href="javascript:void(0);"><![endif]-->
+				<dl>
+					<dt>
+						<a href="javascript:void(0);"><img src="images/past_nav2.png" border="0" /> </a>
+					</dt>
+					<dd>
+						<a href="javascript:void(0);">已打开的文档</a>
+					</dd>
+					<dd>
+						<a href="javascript:void(0);">已打开的文档</a>
+					</dd>
+					<dd>
+						<a href="javascript:void(0);">已打开的文档</a>
+					</dd>
+				</dl>
+				<!--[if lte IE 6]></a><![endif]-->
+			</div>
+		</div>
+	</div>
+	<div id="foot">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="background: url(images/copyright_bg.png) repeat-x; color: #8EA3BF; padding-right: 10px; height: 27px; border-top: 1px solid #8EA3BF; border-bottom: 1px solid #8EA3BF; text-align: right; font-size: 12px;">版权所有：郑州新开普电子股份有限公司</td>
+			</tr>
+		</table>
+	</div>
+	<div id="content" dojoType="capec.frame.MainTabs" data-dojo-props='tabPosition:"top",defaultPage:"${defaultPage}"'></div>
+</div>

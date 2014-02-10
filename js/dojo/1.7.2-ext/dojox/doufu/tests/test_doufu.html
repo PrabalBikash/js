@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../../../resjs/commons/components/dojo/dojo/resources/dojo.css" />
+		<link rel="stylesheet" type="text/css" href="../../../../resjs/commons/components/dojo/dijit/themes/fore/fore.css" />
+		<link rel="stylesheet" type="text/css" href="../../../../resjs/commons/components/dojo/dojox/layout/resources/ToggleSplitter.css" />
+
+
+		<script type="text/javascript">
+			var djConfig = {
+				locale: "zh",
+				async: true,
+				bindEncoding: "UTF-8",
+				packages: [{
+					name: "capec",
+					location: "../../../../../dojox/dojox"
+				}]
+			};
+		</script>
+
+		<script type="text/javascript" src="../../../../resjs/commons/components/dojo/dojo/dojo.js" data-dojo-config="isDebug:false,parseOnLoad:true"></script>
+
+		<SCRIPT LANGUAGE="JavaScript">
+		<!--
+			require(["dojo/ready",
+				"capec/doufu/Doufu",
+				"dojo/data/ItemFileWriteStore"],function($ready,$Doufu,$ItemFileWriteStore){
+				/*$ready(function(){
+					var def = dojo.xhrGet({
+						url: 'doufu.json',
+						handleAs: 'json'
+					});
+
+					def.then(function(authors){
+						// Get a reference to our container
+						var authorContainer = dojo.byId('main_loader');
+
+						dojo.forEach(authors, function(author){
+							// Create our widget and place it
+							var widget = new $Doufu(author).placeAt(authorContainer);
+						});
+					});
+				});*/
+
+
+				$ready(function(){
+					var def = dojo.xhrGet({
+						url: 'doufu.json',
+						handleAs: 'json'
+					});
+
+					var __doufu = new $Doufu({
+						id: "doufu",
+						name: "豆腐标题",
+						moreUrl: "http://www.foreworld.net",
+						style: {
+							width: "500px",
+							height: "210px",
+							border: "1px red solid"
+						},
+						headerLink: [
+										{ name: "国内", href: "guonei.html", target: "_blank"},
+										{ name: "国际", href: "guoji.html", target: "_blank"}
+						]
+					},"doufu");
+
+					var __store = new $ItemFileWriteStore({
+						data: {
+							items: [
+								[{ name: "百度", href: "http://www.baidu.com", index: 0, target: "_blank"},
+								{ name: "谷歌", href: "http://www.google.com", index: 0, target: "_blank"}],
+								[{ name: "腾讯", href: "http://www.qq.com", index: 1, target: "_blank"}]
+							]
+						}
+					});
+
+					__doufu.setStore(__store);
+				});
+			});
+		//-->
+		</SCRIPT>
+
+	</head>
+	<body class="soria">
+		<div id="doufu"></div>
+	</body>
+</html>
