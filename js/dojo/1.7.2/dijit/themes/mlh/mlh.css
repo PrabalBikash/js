@@ -1,0 +1,450 @@
+﻿@import url("mlhx.css");
+
+.mlh .dijitAccordionText{ _padding-top:4px;}
+
+.dijitTabCloseButton {
+	margin-left: 0px;
+}
+.dijitTab .tabLabel {
+	font-weight:bold;
+	color:#333
+}
+.mlh .dijitTabPaneWrapper {
+	border:1px solid #bed5f4;
+	border-top:none;
+}
+.mlh .dijitTabInnerDiv {
+	padding:0 3px 0 0;
+	margin: 0 0 0 4px;
+	background: url(images/tabContainerSprite.gif) no-repeat;
+	background-position: right -400px;
+}
+.mlh .dijitTab {
+	background: url(images/tabContainerSprite.gif) no-repeat 0 -300px;
+	border-bottom: 1px #bed5f4 solid;
+}
+.mlh .dijitTabContainerTop-tabs {
+	border-color: #bed5f4;
+}
+.mlh .dijitTabContainerTop-tabs .dijitTabChecked {
+	border-bottom-color: #fff;
+}
+.mlh .dijitTabContainerTopStrip {
+	border: 1px solid #bed5f4;
+}
+.mlh .dijitTabContainerBottom-tabs {
+	border-top: 1px solid #bed5f4;
+}
+.mlh .dijitTabContainerBottom-tabs .dijitTab {
+	border-top: 1px solid #bed5f4;
+}
+.mlh .dijitTabContainerBottomStrip {
+	border: 1px solid #bed5f4;
+}
+.mlh .dijitTabContainerBottom-spacer,
+.mlh .dijitTabContainerTop-spacer {
+	border-top:0px solid #ffffff;
+	border-left:1px solid #bed5f4;
+	border-right:1px solid #bed5f4;
+	border-bottom:0;
+	background: #fff;
+}
+.mlh .dijitTabContainerRight-tabs .dijitTab {
+	border-left: 1px solid #bed5f4;
+	border-bottom: 1px solid #bed5f4 !important;
+}
+.dj_ie6 .mlh .dijitTabContainerRight-tabs .dijitTabInnerDiv,
+.dj_ie7 .mlh .dijitTabContainerRight-tabs .dijitTabInnerDiv {
+	border-bottom: solid #bed5f4 1px;
+}
+.mlh .dijitTabContainerRightStrip {
+	border: 1px solid #bed5f4;
+}
+.mlh .dijitTabContainerLeft-tabs .dijitTab {
+	border-right: 1px solid #bed5f4;
+	border-bottom: 1px solid #bed5f4;
+}
+.dj_ie6 .mlh .dijitTabContainerLeft-tabs .dijitTabInnerDiv,
+.dj_ie7 .mlh .dijitTabContainerLeft-tabs .dijitTabInnerDiv {
+	border-bottom: solid #bed5f4 1px;
+}
+.mlh .dijitTabContainerLeftStrip {
+	border: 1px solid #bed5f4;
+}
+.mlh .dijitTabContainer .tabStripButton-bottom {
+	border-top: 1px solid #bed5f4;
+}
+.mlh .dijitAccordionContainer {
+	border-color: #bed5f4;
+}
+.mlh .dijitAccordionTitle {
+	background: #f9f9f9 url(images/accordionItemActive.jpg) top repeat-x;
+	font-weight: bold;
+	border-top: 1px solid #afcfdc;
+	padding:0px 10px 0px 10px;
+	height:28px;
+	color: #115c84;
+	font-size:12px;
+	line-height:28px;
+	_height:23px;
+	_line-height:23px;
+}
+.mlh .dijitAccordionTitleSelected  {
+	background: #f9f9f9 url(images/accordionItemActive.jpg) top repeat-x;
+	font-weight: bold;
+	border-top: 1px solid #afcfdc;border-bottom: 1px solid #afcfdc;
+	padding: 0px;
+	height:28px; line-height:28px;padding-left:10px; padding-right:10px;
+	color: #115c84;_height:23px;_line-height:23px;
+}
+.mlh .dijitAccordionArrow {
+	background:url(images/newc4.jpg) no-repeat left top;background:url(images/newc4.jpg) no-repeat left top\9;*background:url(images/Newpic_r4_c6.jpg) no-repeat 0 0;_background:url(images/Newpic_r4_c6.jpg) no-repeat 0 0;
+	width:10px;
+	height:26px;_height:22px; float:right;
+	margin-top:0px;
+	*margin-top:6px;
+	_margin-top:6px;
+	_float:right;
+}
+.mlh .dijitAccordionTitleSelected .dijitAccordionArrow {
+	background:url(images/newc6.jpg) no-repeat left top;background:url(images/newc6.jpg) no-repeat left top\9;*background:url(images/Newpic_r6_c6.jpg) no-repeat 0 0;_background:url(images/Newpic_r6_c6.jpg) no-repeat 0 0;
+	width:10px;
+	height:26px;_height:22px; float:right;
+	margin-top:0px;
+	 *margin-top:6px;_margin-top:6px;
+	_float:right;
+}
+
+.mlh .dijitInputContainer input, .mlh .dijitTextBox {
+	width:142px;
+	height:19px;
+}
+.mlh .dijitButtonNode {
+	border: 1px solid #8ba0bd;
+	padding: 0px;
+	font-size:12px;
+	height:18px;
+}
+.mlh .dijitButtonText {
+	color:#0E608E;
+	padding: 1px 0.3em;
+}
+.mlh .dijitSliderProgressBarH {
+	border-color: #bed5f4;
+}
+.mlh .dijitSliderProgressBarV {
+	border-color: #bed5f4;
+}
+.mlh table.dijitCalendarContainer {
+	border: 1px solid #bed5f4;
+}
+.mlh .dijitCalendarDayLabelTemplate {
+	border-bottom: 1px solid #bed5f4;
+}
+.mlh .dijitTimePickerTick,
+.mlh .dijitTimePickerMarker {
+	border-color: #bed5f4;
+}
+.mlh .dijitToolbar {
+	border-bottom: 1px solid #E6E6E6;
+	background:#eaeaea url(images/titleBar_1.png) repeat-x top left;
+	line-height:24px;
+	padding-bottom:1px;
+}
+.mlh .dijitToolbar .dijitButtonHover,
+.mlh .dijitToolbar .dijitToggleButtonHover,
+.mlh .dijitToolbar .dijitDropDownButtonHover,
+.mlh .dijitToolbar .dijitComboButton .dijitButtonContentsHover,
+.mlh .dijitToolbar .dijitComboButton .dijitDownArrowButtonHover {
+	border: 1px solid #CFE2EB;
+	background-color:#E2EFF3;
+}
+.mlh .dijitDialog .dijitDialogPaneContent {
+	border-top: 1px solid #bed5f4;
+}
+.mlh .dijitBorderContainer .dijitMenuBar {
+	border:1px solid #bed5f4;
+}
+
+.mlh .dijitTabStripIcon {
+	height: 14px;
+	width: 14px;
+	background: url(images/spriteRoundedIconsSmall.png) no-repeat left top ;
+}
+
+.mlh .dijitTabCloseButton {
+	width: 15px;
+	height: 15px;
+	background: url(images/spriteRoundedIconsSmall.png) no-repeat -60px top;
+	margin-top: -1px;
+}
+.dj_ie6 .mlh .dijitTabCloseButton {
+	background: url(images/spriteRoundedIconsSmall.gif) no-repeat -60px top;
+}
+.mlh .dijitTabCloseButtonHover {
+	background: url(images/spriteRoundedIconsSmall.png) no-repeat -60px -15px;
+}
+.dj_ie6 .mlh .dijitTabCloseButtonHover {
+	background: url(images/spriteRoundedIconsSmall.gif) no-repeat -60px -15px;
+}
+.mlh .dijitTabStripIcon {
+	height: 14px;
+	width: 14px;
+	background: url(images/spriteRoundedIconsSmall.png) no-repeat left top ;
+}
+.dj_ie6 .mlh .dijitTabStripIcon {
+	background-image: url(images/spriteRoundedIconsSmall.gif);
+}
+.mlh .dijitTitlePane .dijitClosed .dijitArrowNode {
+	background: url(images/spriteRoundedIconsSmall.png) no-repeat -30px top;
+}
+.dj_ie6 .mlh .dijitTitlePane .dijitClosed .dijitArrowNode {
+	background:url(images/spriteRoundedIconsSmall.gif) no-repeat -30px top;
+}
+.mlh .dijitTitlePane .dijitOpen .dijitArrowNode {
+	background:url(images/spriteRoundedIconsSmall.png) no-repeat -15px top;
+}
+.dj_ie6 .mlh .dijitTitlePane .dijitOpen .dijitArrowNode {
+	background:url(images/spriteRoundedIconsSmall.gif) no-repeat -15px top;
+}
+.mlh .dijitTabInnerDiv .dijitTabContent {
+	padding:4px 3px 2px 4px;
+	background: url(images/tabContainerSprite.gif) repeat-x 0 -350px;
+	position: relative;
+}
+.mlh .dijitTabStripMenuIcon {
+	background-position: -15px top;
+}
+.mlh .dijitTabStripSlideRightIcon {
+    background-position: -30px top;
+}
+
+.mlh .dijitTabHover .dijitTabInnerDiv .dijitTabContent {
+	background: url(images/tabContainerSprite.gif) repeat-x 0 -200px;
+}
+.mlh .dijitTabChecked
+{
+
+	background: url(images/tabContainerSprite.gif) no-repeat 0 -0;
+}
+.mlh .dijitTabChecked .dijitTabInnerDiv {
+	background: url(images/tabContainerSprite.gif) no-repeat right -100px;
+}
+.mlh .dijitTabChecked .dijitTabInnerDiv .dijitTabContent {
+	background: url(images/tabContainerSprite.gif) repeat-x 0 -50px;
+}
+.dijitPlaceHolder {
+
+	color: #AAAAAA;
+	font-style: italic;
+	position: absolute;
+	line-height:21px;
+	left: 0;
+	#filter: "";
+}
+
+.mlh .dijitDialog .dijitDialogTitle{
+	font-size: 12px;
+}
+
+
+.mlh{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+.mlh .loader{
+	padding:0;
+	margin:0;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#ededed;
+	z-index:999;
+	vertical-align:middle;
+}
+
+.mlh .loader div{
+	padding:5px;
+	position:relative;
+	left:0px;
+	top:0px;
+	width:175px;
+	background:#3c3;
+	color:#fff;
+	direction:ltr;
+}
+
+.mlh .main{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+.mlh .main_top{
+	background: url(images/logo_bg.jpg) repeat-x left top;
+	width:100%;
+	height:58px;
+	overflow:hidden;
+}
+
+.mlh .main_copyright{
+	background:url(images/bg_cpyr.jpg) repeat-x;
+	text-align:right;
+	padding-right:5px;
+	height:28px;
+	_height:28px;
+	*height:28px;
+	_line-height:28px;
+	*line-height:28px;
+	line-height:28px;
+	margin:0;
+	font-size:12px;
+	border: 1px #bed5f4 solid;
+}
+
+
+
+.mlh .main_logo{
+	background: url(images/logo.jpg);
+	width:345px;
+	height:69px;
+	float:left;
+}
+.mlh .main_top_right{
+	background: url(images/logo_right.jpg) no-repeat right bottom;
+	font-size:12px;
+	width:650px;
+	height:69px;
+	position:relative;
+	float:right
+}
+.mlh .main_top_bar{
+	height:32px;
+	line-height:32px;
+	text-align:right;
+	position:absolute;
+	top:32px;
+	right:15px;
+	color:#fff;
+}
+.mlh .main_top_bar a{
+	color:#fff;
+}
+.mlh .main_top_bar a:hover{
+	text-decoration:none;
+	color:#333;
+}
+.mlh .main_top_bar li{
+	background:url(images/top_line.jpg) no-repeat right 3px;
+	padding:0 10px;
+	*margin-top:12px;
+	text-align:right;
+	float:left;
+	height:32px;
+	list-style-type: none;
+}
+.mlh .main_top_bar li a{
+	padding-left:25px;
+	background:url("") no-repeat  left center;
+	text-decoration:none;
+}
+.mlh .main_top_bar .l2{
+	background:url(images/2.gif) no-repeat;
+	padding-left:20px;
+}
+.mlh .main_top_bar .l3{
+	background:url(images/3.gif) no-repeat;
+}
+.mlh .main_top_bar .l4{
+	background:url(images/4.gif) no-repeat;
+}
+.mlh .main_top_bar .l5{
+	background:url(images/5.jpg) no-repeat;
+}
+.mlh .main_clr{
+	clear:both;
+}
+
+.mlh .main_helpChk{
+	margin-top:2px;
+	float:left;
+}
+
+.mlh .main_tabs{
+	width:100%;
+	padding-Right:3px;
+}
+
+.mlh .main_left{
+	width:230px;
+	margin:0 0 0 5px;
+	border-top: 0;
+}
+
+.mlh .main_left_top{
+	padding:1px;
+	height:26px;
+	_height:30px;
+	border: 1px #bed5f4 solid;
+}
+.mlh .main_left_top_search{
+	background:#DDEAFA;
+	height:26px;
+	padding-left:3px;
+}
+
+
+.dijitIconRole{background-position: -512px;}
+.dijitIconCard{background-position: -544px;}
+.dijitIconEmployee{background-position: -528px;}
+.dijitIconRole,
+.dijitIconCard,
+.dijitIconEmployee{
+	background-image: url(images/commonIconsObjActEnabled.png);
+	width: 16px;
+	height: 16px;
+	_float:left;
+	_margin-top:5px;
+}
+
+.mlh .dialogPaneActionBar {
+	background-color: #efefef;
+	padding: 1px 5px 2px 7px;
+	text-align: right;
+	/*border-top: 0px solid #d3d3d3;
+	border-bottom: 1px solid #d3d3d3;
+	border-left: 1px solid #d3d3d3;
+	border-right: 1px solid #d3d3d3;*/
+	margin: 0px 0px -4px;
+	*height:29px;
+	height:29px;
+}
+
+.mlh .tipDialogPaneActionBar {
+	background-color: #efefef;
+	padding: 1px 5px 2px 7px;
+	text-align: right;
+	border-top: 0px solid #d3d3d3;
+	border-bottom: 1px solid #d3d3d3;
+	border-left: 1px solid #d3d3d3;
+	border-right: 1px solid #d3d3d3;
+	margin: 0px 0px -4px;
+	*height:29px;
+	height:29px;
+}
+
+.mlh .dialogPaneActionBar .dialogPaneButton{
+	margin-top:5px;
+}
+
+.mlh .tipDialogPaneActionBar .dialogPaneButton{
+	margin-top:5px;
+}
