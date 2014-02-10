@@ -1,0 +1,24 @@
+.night .dojoxGridHeader .dojoxGridHeaderActive {
+	background-color:#91c9fe;
+}
+.night td.dojoxGridRowSelected {
+	border-collapse:separate;
+	background:url("../../../resources/images/row_back.png") #CEE6FA repeat-x;
+}
+.night .dojoxGridRowOver td.dojoxGridRowSelected {
+	border-top:1px solid #769DC0;
+	border-bottom:1px solid #769DC0;
+}
+.night .dojoxGridRowActive td.dojoxGridRowSelected {
+	background-image:url("../../../resources/images/td_button_down.png");
+}
+.dj_ie6 .night .dojoxGridRowOver .dojoxGridCell {
+	border-color: #ABD6FF;
+}
+.dj_ie6 .night .dojoxGridRowActive .dojoxGridCell {
+	border-color: #7DBEFA;
+}
+.night .dojoxGridPaginator{
+	background: url("../../../resources/images/header_shadow.png") repeat-x scroll center bottom #E5EDF4;
+	
+}
