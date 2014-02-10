@@ -1,0 +1,82 @@
+/*
+ *  cbtree CheckBox Widgets CSS
+ *
+ *	Order of images in the sprite (from L to R):
+ *		checkbox	normal 	 - checked
+ *							 - unchecked
+ *							 - mixed
+ *					disabled - checked
+ *							 - unchecked
+ *							 - mixed
+ *					hover 	 - checked
+ *							 - unchecked
+ *							 - mixed
+ */
+.capec .cbtreeCheckBox {
+	background-image: url('images/spriteCheckbox.gif'); /* checkbox sprite image */
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+.capec .cbtreeCheckBox {
+	/* unchecked */
+	background-position: -16px;
+}
+
+.capec .cbtreeCheckBoxChecked {
+	/* checked */
+	background-position: 0px;
+}
+
+.capec .cbtreeCheckBoxMixed {
+	/* checked & mixed */
+	background-position: -32px;
+}
+
+.capec .cbtreeCheckBoxDisabled {
+	/* disabled */
+	background-position: -64px;
+}
+
+.capec .cbtreeCheckBoxCheckedDisabled {
+	/* disabled but checked */
+	background-position: -48px;
+}
+
+.capec .cbtreeCheckBoxMixedDisabled {
+	/* checked & mixed */
+	background-position: -80px;
+}
+
+.capec .cbtreeCheckBoxReadOnly {
+	/* ReadOnly */
+	background-position: -64px;
+}
+
+.capec .cbtreeCheckBoxCheckedReadOnly {
+	/* ReadOnly but checked */
+	background-position: -48px;
+}
+
+.capec .cbtreeCheckBoxMixedReadOnly {
+	/* ReadOnly & mixed */
+	background-position: -80px;
+}
+
+.capec .cbtreeCheckBoxHover {
+	/* hovering over an unchecked enabled checkbox */
+	background-position: -112px;
+}
+
+.capec .cbtreeCheckBoxCheckedHover {
+	/* hovering over a checked enabled checkbox */
+	background-position: -96px;
+}
+
+.capec .cbtreeCheckBoxMixedHover {
+	/* checked & mixed */
+	background-position: -128px;
+}
