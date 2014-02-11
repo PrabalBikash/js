@@ -57,6 +57,7 @@
                 elmts.push($this); 
                   
                 var from  = data.from,
+                    top = options.top,
                     to    = data.to;
               
                 if (from + $this.outerHeight() > data.end) {
@@ -67,7 +68,7 @@
                 if (from < scrollY && to > scrollY) {
                     !($this.css("position") == "fixed") && $this.css({
                         left: $this.offset().left,
-                        top: 60
+                        top: top
                     }).css("position", "fixed");
                     if (options.activeClass) { $this.addClass(options.activeClass); }
                 } else if (scrollY >= to) {
