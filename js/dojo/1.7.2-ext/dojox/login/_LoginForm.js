@@ -84,7 +84,7 @@ define(["dojo/_base/declare",
 			case "success":
 				this.setMessage("");
 				console.log("登陆成功，跳转页面："+ this.nextUrl);
-				location.href = $randomUrl(this.nextUrl) +"&locale="+ $data.myinfo.locale +"&theme="+ $data.myinfo.theme;
+				location.href = $randomUrl(this.nextUrl) +"&theme="+ $data.myinfo.theme;
 				break;
 			default:
 				this._refreshVerifyCode($data.status);
