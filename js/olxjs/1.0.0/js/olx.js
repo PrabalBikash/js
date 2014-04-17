@@ -116,6 +116,40 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 		return this;
 	};
 
+	$.fn.olxUtilLoad2 = function(url, params, callback){
+		var that = this;
+
+		$.ajax({
+			url: $.fn.olxUtilRandomUrl(url),
+			type: "POST",
+			dataType: "json",
+			data: {
+				data: JSON.stringify(params)
+			}
+		}).done(function(responseText) {
+			var parent = that.parent();
+			var length = parent.children().length - 1;
+			var prev = that.prev();
+			var next = that.next();
+
+			that.remove();
+
+			if(responseText.success){
+				if(length){
+					if(prev.length){
+						prev.after(responseText.msg);
+					}else{
+						next.before(responseText.msg);
+					}
+				}else{
+					parent.append(responseText.msg);
+				}
+			}
+		}).complete(callback);
+
+		return this;
+	};
+
 })(jQuery);	
 
 /**
@@ -146,7 +180,7 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 			url = that.data("url"),
 			id = that.attr("id");
 		
-		$(that).olxUtilLoad(url, params[0], function(){
+		$(that).olxUtilLoad2(url, params[0], function(){
 			initGrid($("#"+id));
 			var fn = params[1];
 			fn.apply(this, arguments);
