@@ -52,10 +52,12 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 			url: $.fn.olxUtilRandomUrl(url),
 			type: "POST",
 			dataType: "json",
-			data: params
+			data: {
+				data: JSON.stringify(params)
+			}
 		}).done(function(responseText) {
-			// console.log(responseText)
-		}).complete(callback);
+			callback(responseText);
+		})
 	};
 
 	/**
@@ -458,10 +460,6 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 		var that = this,
 			form = this._element;
 
-		form.submit(function(){
-			return that.submit();
-		});
-
 		form.on("reset", function(){
 			return that.reset();
 		});
@@ -514,7 +512,7 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 	 *
 	 * @return 
 	*/
-	Form.prototype.submit = function(){
+	Form.prototype.submit = function(cb){
 		var that = this;
 		/* 表单验证结果 */
 		var validateResult = that.validate(),
@@ -525,9 +523,7 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 			formObj = that.serializeObjectForm();
 			url = that._element.data("url");
 
-			$(that).olxUtilLoad(url, formObj, function(){
-				console.log(arguments);
-			});
+			$(that).olxAjax(url, formObj, cb);
 		};
 		return false;
 	};
