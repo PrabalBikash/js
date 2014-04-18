@@ -303,18 +303,18 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 				/* tbody中的Checkbox */
 				for(var i=0,j=td_checkboxs.length;i<j;i++){
 					$(td_checkboxs[i]).bind("change", function(){
-						var m,count;
-						var checked = $(this).is(":checked");
+						var count,
+							checked = $(this).is(":checked");
 						if(checked){
 							/* 选中的Checkbox的总数 */
 							count = 0;
-							for(m=0;m<j;m++){
+							for(var m=0;m<j;m++){
 								if(!$(td_checkboxs[m]).prop("checked")){
 									break;
 								}
 								count++;
 							}
-							checkbox.prop("checked", j == count);
+							checkbox.prop("checked", j === count);
 						}else{
 							checkbox.prop("checked", checked);
 						}
