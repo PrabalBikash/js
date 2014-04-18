@@ -203,6 +203,21 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 	};
 
 	/**
+	 * 获取选中的Checkboxs的对象
+	 *
+	 * @method
+	 * @param col 列号,从1开始
+	 * @return 数组
+	*/
+	Grid.prototype.getCheckedRowsCheckbox = function(col){
+		var vals = [];
+		this.getCheckedRows(col).each(function(){
+			vals.push($(this));
+		});
+		return vals;
+	};
+
+	/**
 	 * 获取选中的Checkboxs的总数
 	 *
 	 * @method
