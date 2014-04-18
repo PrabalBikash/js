@@ -278,14 +278,12 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 	};
 
 	function initGrid(grid){
-		var i,j;
 		/* 获取表头列中全部的checkbox组件 */
 		var checkboxs = grid.find("thead tr th input[type='checkbox']");
 
-		for(i=0,j=checkboxs.length;i<j;i++){
+		for(var i=0;i<checkboxs.length;i++){
 			/* 绑定Checkbox事件，实现全选/取消 */
-			(function(checkbox){
-				var i,j;
+			(function (checkbox){
 				/* 当前Checkbox的父节点的索引 */
 				var index = checkbox.parent().index();
 				index++;
@@ -295,16 +293,15 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 
 				/* 主Checkbox绑定事件 */
 				$(checkbox).bind("change",function(){
-					var i,j;
 					var checked = $(this).is(":checked");
 					/* 选中/全选 */
-					for(i=0,j=td_checkboxs.length;i<j;i++){
+					for(var i=0;i<td_checkboxs.length;i++){
 						$(td_checkboxs[i]).prop("checked", checked);
 					}
 				});
 
 				/* tbody中的Checkbox */
-				for(i=0,j=td_checkboxs.length;i<j;i++){
+				for(var i=0,j=td_checkboxs.length;i<j;i++){
 					$(td_checkboxs[i]).bind("change", function(){
 						var m,count;
 						var checked = $(this).is(":checked");
@@ -323,7 +320,6 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 						}
 					});
 				}
-
 			})($(checkboxs[i]));
 		}
 	}
