@@ -122,10 +122,7 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 		$.ajax({
 			url: $.fn.olxUtilRandomUrl(url),
 			type: "GET",
-			dataType: "json",
-			data: {
-				data: JSON.stringify(params)
-			}
+			dataType: "json"
 		}).done(function(responseText) {
 			var parent = that.parent();
 			var length = parent.children().length - 1;
