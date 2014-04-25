@@ -121,7 +121,7 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 
 		$.ajax({
 			url: $.fn.olxUtilRandomUrl(url),
-			type: "POST",
+			type: "GET",
 			dataType: "json",
 			data: {
 				data: JSON.stringify(params)
