@@ -137,12 +137,12 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 			if(responseText.success){
 				if(length){
 					if(prev.length){
-						prev.after(responseText.msg);
+						prev.after(responseText.data);
 					}else{
-						next.before(responseText.msg);
+						next.before(responseText.data);
 					}
 				}else{
-					parent.append(responseText.msg);
+					parent.append(responseText.data);
 				}
 			}
 		}).complete(callback);
