@@ -1,0 +1,1 @@
+java -jar yuicompressor-2.4.8.jar ../../js/olxjs/1.0.0/js/olx.js -o ../../js/olxjs/1.0.0/js/olx.min.js --charset utf-8
