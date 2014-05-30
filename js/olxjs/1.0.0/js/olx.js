@@ -553,24 +553,24 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 	 * @return 
 	*/
 	Form.prototype.submit = function(params){
-		var that = this;
+		var that = this,
+			widget;
 
 		var formObj = that.serializeObjectForm();
 		/* 表单验证 */
 		var vali = params[0],
-			valiResu = vali(formObj),
 			fail = params[1],
+			valiResu = vali(formObj),
 			frm = that._element[0];
-			
+
 		if(valiResu){
 			if(fail) return fail(valiResu);
-			return $('#'+ frm.id +'_'+ valiResu[1]).olxFormInput('validate', valiResu);
+			widget = $('#'+ frm.id +'_'+ valiResu[1]);
+			if(widget) widget.olxFormInput('validate', valiResu);
+			return;
 		}
 
-		var success = params[2],
-			url= that._element.data('url');
-
-		$(that).olxAjax(url, formObj, success);
+		$(that).olxAjax(that._element.data('url'), formObj, params[2]);
 		return false;
 	};
 
