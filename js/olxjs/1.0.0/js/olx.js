@@ -41,23 +41,21 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 	 * Ajax
 	 *
 	 * @url
-	 * @params
-	 * @callback
+	 * @obj
+	 * @cb
 	 * @return this
 	*/
-	$.fn.olxAjax = function(url, params, callback){
-		var that = this;
-
+	$.fn.olxAjax = function(url, obj, cb){
 		$.ajax({
 			url: $.fn.olxUtilRandomUrl(url),
 			type: "POST",
 			dataType: "json",
 			data: {
-				data: JSON.stringify(params)
+				data: JSON.stringify(obj)
 			}
-		}).done(function(responseText) {
-			callback(responseText);
-		})
+		}).done(function (data) {
+			cb(data);
+		});
 	};
 
 	/**
@@ -554,19 +552,25 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 	 *
 	 * @return 
 	*/
-	Form.prototype.submit = function(cb){
+	Form.prototype.submit = function(params){
 		var that = this;
-		/* 表单验证结果 */
-		var validateResult = that.validate(),
-			formObj,
-			url;
 
-		if (validateResult) {
-			formObj = that.serializeObjectForm();
-			url = that._element.data("url");
+		var formObj = that.serializeObjectForm();
+		/* 表单验证 */
+		var vali = params[0],
+			valiResu = vali(formObj),
+			fail = params[1],
+			frm = that._element[0];
+			
+		if(valiResu){
+			if(fail) return fail(valiResu);
+			return $('#'+ frm.id +'_'+ valiResu[1]).olxFormInput('validate', valiResu);
+		}
 
-			$(that).olxAjax(url, formObj, cb);
-		};
+		var success = params[2],
+			url= that._element.data('url');
+
+		$(that).olxAjax(url, formObj, success);
 		return false;
 	};
 
@@ -630,40 +634,14 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 	 * @params
 	 * @return 
 	*/
-	Input.prototype.validate = function(){
-		var $this = this._element,
-			required = $this.data("required"),
-			value = $this.val(),
-			pattern = $this.attr("data-pattern"),
-			regex,
-			originalTitle = $this.data("original-title");
-
+	Input.prototype.validate = function(valiResu){
+		var $this = this._element;
 		/* 启用tooltip */
 		$this.tooltip("enable");
-
-		/* 字段必填并且值为空字符串 */
-		if(required && "" == value) {				
-			$this.attr("data-original-title", "请填写此字段。");
-			$this.tooltip("toggle");	
-			$this.focus();
-			$this.attr("data-original-title", originalTitle);		
-			return false;
-		}
-
-		/* 正则存在并且值不为空字符串 */
-		if (pattern && "" != value) {
-			regex = new RegExp(pattern);
-
-			if(regex.test(value)){
-				$this.tooltip("disable");
-			}else{
-				$this.tooltip("toggle");
-				$this.focus();
-				return false;
-			}
-		}
-
-		return true;
+		$this.attr("data-original-title", valiResu[0]);
+		$this.tooltip("toggle");
+		$this.focus();
+		return false;
 	};
 
 	var old = $.fn.olxFormInput;
