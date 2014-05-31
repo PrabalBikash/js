@@ -556,11 +556,11 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 		var that = this,
 			widget;
 
-		var formObj = that.serializeObjectForm();
+		var frmObj = that.serializeObjectForm();
 		/* 表单验证 */
 		var vali = params[0],
 			fail = params[1],
-			valiResu = vali(formObj),
+			valiResu = vali(frmObj),
 			frm = that._element[0];
 
 		if(valiResu){
@@ -570,7 +570,7 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 			return;
 		}
 
-		$(that).olxAjax(that._element.data('url'), formObj, params[2]);
+		$(that).olxAjax(that._element.data('url'), frmObj, params[2]);
 		return false;
 	};
 
