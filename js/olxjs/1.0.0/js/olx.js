@@ -33,7 +33,7 @@ if (typeof jQuery === "undefined") { throw new Error("Olx requires jQuery") }
 	*/
 	$.fn.olxQueryString = function($key){
 		var uri = window.location.search;
-		var re = new RegExp(""+ val +"\=([^\&\?]*)", "ig");
+		var re = new RegExp(""+ $key +"\=([^\&\?]*)", "ig");
 		return ((uri.match(re)) ? (uri.match(re)[0].substr($key.length + 1)) : "");
 	};
 
