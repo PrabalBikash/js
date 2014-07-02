@@ -49,6 +49,10 @@ http.createServer(function (request, response) {
         var contentType = mime[ext] || 'text/plain';
         response.setHeader('Content-Type', contentType);
 
+        response.setHeader('Access-Control-Allow-Origin', "*");
+        response.setHeader('Access-Control-Allow-Credentials', true);
+        response.setHeader('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
+
         fs.stat(filename, function (err, stat) {
             var lastModified = stat.mtime.toUTCString();
             var ifModifiedSince = "If-Modified-Since".toLowerCase();
