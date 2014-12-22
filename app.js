@@ -8,6 +8,8 @@ var sys = require('sys'),
     zlib = require('zlib'),
     utils = require('./utils');
 
+var port = process.env.PORT || 8082;
+
 http.createServer(function (request, response) {
     var uri = url.parse(request.url).pathname;
     var filename = path.join(__dirname + '', uri);
@@ -108,7 +110,7 @@ http.createServer(function (request, response) {
             }
         });
     });
-}).listen(8082);
+}).listen(port);
 
-sys.puts('server running at http://localhost:8082/');
+sys.puts('server running at http://localhost:'+ port +'/');
 
